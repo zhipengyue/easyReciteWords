@@ -1,0 +1,42 @@
+<!--ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let c of countries">
+      <ion-avatar item-left>
+        <img src="{{c.flag}}">
+      </ion-avatar>
+      <h2>{{c.name}}</h2>
+      <p>Capital: {{c.capital}}, Region: {{c.region}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>翻译</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="top">
+    <ion-label fixed>{{translate.from.text}}</ion-label>
+      <button ion-button (click)="toggleSourceAndTarget($event)">
+        <ion-icon name="code"></ion-icon>
+      </button>
+    <ion-label fixed>{{translate.to.text}}</ion-label>
+  </div>
+  <ion-icon class="resetbtn" name="ios-close-circle-outline" (click)="resetInputArea($event)"></ion-icon>
+  <textarea name="" id="" class="content" cols="30" rows="4" [(ngModel)]="content"></textarea>
+  <button ion-button full (click)="translateHandle($event)">翻译</button>
+  <ul class="result">
+    <li *ngFor="let c of resultList">
+      <div class="en">{{c.word}} <span class="type">[{{c.typeen}}|{{c.typecn}}]</span><ion-icon (click)="playVoice($event,c.voice)" class="mp3" name="ios-notifications"></ion-icon></div>
+      <div class="cn">{{c.means}}</div>
+    </li>
+  </ul>
+</ion-content>

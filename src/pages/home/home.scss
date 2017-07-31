@@ -1,0 +1,51 @@
+page-home {
+    .top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        ion-label{
+            text-align: center;
+            align-items: center;
+        }
+    }
+    .content{
+        border:1px solid #eee;
+        border-radius: 5px;
+        width: 100%;
+        margin-top:10px;
+        resize:none;
+    }
+    .resetbtn{
+        position: absolute;
+        right:17px;
+        margin-top:12px;
+        width: 15px;
+        height:15px;
+    }
+    .result{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            padding-top:10px;
+            padding-bottom:10px;
+            border-bottom: 1px solid #eee;
+            .en{
+                font-size: 1.2em;
+                .type{
+                    font-size: 0.8em;
+                    color:#aaa;
+                }
+                .mp3{
+                    /*float: right;*/
+                    margin-left:10px;
+                }
+            }
+            .cn{
+                margin-top:2px;
+                color:#666;
+            }
+            
+        }
+    }
+}
