@@ -1,13 +1,13 @@
 webpackJsonp([2],{
 
-/***/ 267:
+/***/ 271:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageModule", function() { return ContactPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tabs__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(97);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -18,28 +18,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ContactPageModule = (function () {
-    function ContactPageModule() {
+var TabsPageModule = (function () {
+    function TabsPageModule() {
     }
-    return ContactPageModule;
+    return TabsPageModule;
 }());
-ContactPageModule = __decorate([
+TabsPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
-        declarations: [__WEBPACK_IMPORTED_MODULE_1__contact__["a" /* ContactPage */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__contact__["a" /* ContactPage */])],
-        entryComponents: [__WEBPACK_IMPORTED_MODULE_1__contact__["a" /* ContactPage */]]
+        declarations: [__WEBPACK_IMPORTED_MODULE_1__tabs__["a" /* TabsPage */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_1__tabs__["a" /* TabsPage */])],
+        entryComponents: [__WEBPACK_IMPORTED_MODULE_1__tabs__["a" /* TabsPage */]]
     })
-], ContactPageModule);
+], TabsPageModule);
 
-//# sourceMappingURL=contact.module.js.map
+//# sourceMappingURL=tabs.module.js.map
 
 /***/ }),
 
-/***/ 271:
+/***/ 278:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(97);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -53,22 +53,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var ContactPage = (function () {
-    function ContactPage(navCtrl) {
-        this.navCtrl = navCtrl;
+var TabsPage = (function () {
+    function TabsPage() {
+        this.tab1Root = 'HomePage';
+        this.tab2Root = 'ReciteWordsPage';
+        this.tab3Root = 'ContactPage';
     }
-    return ContactPage;
+    return TabsPage;
 }());
-ContactPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-contact',template:/*ion-inline-start:"/Users/pengyuezhi/Desktop/我的应用/记单词/easyReciteWords/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-left></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/pengyuezhi/Desktop/我的应用/记单词/easyReciteWords/src/pages/contact/contact.html"*/
+TabsPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/pengyuezhi/Desktop/我的应用/记单词/easyReciteWords/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="翻译" tabIcon="ios-search"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="单词本" tabIcon="ios-book"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="账号" tabIcon="ios-person"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/pengyuezhi/Desktop/我的应用/记单词/easyReciteWords/src/pages/tabs/tabs.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
-], ContactPage);
+    __metadata("design:paramtypes", [])
+], TabsPage);
 
-//# sourceMappingURL=contact.js.map
+//# sourceMappingURL=tabs.js.map
 
 /***/ })
 

@@ -1,17 +1,67 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      登录
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-list *ngIf="displayMode=='login'">
+  <ion-item>
+    <ion-label fixed>用户名</ion-label>
+    <ion-input type="text" [(ngModel)]="user.userName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>密码</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <button ion-button full (click)="login($event)">登录</button>
+  <button ion-button block>忘记密码</button>
+  <button ion-button block (click)="createAccountPage($event)">创建账户</button>
+</ion-list>
+<ion-list *ngIf="displayMode=='regist'">
+  <ion-item>
+    <ion-label fixed>昵称</ion-label>
+    <ion-input type="userName" [(ngModel)]="user.userName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>密码</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>邮箱</ion-label>
+    <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="avalidateAccount($event)">创建账户</button>
+  <button ion-button block (click)="loginPage($event)">登录页面</button>
+</ion-list>
+
+<ion-list *ngIf="displayMode=='avalidate'">
+  <ion-card>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+      请将发至您邮箱的秘钥填写在下面的输入框内，以完成注册
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-label fixed>激活秘钥</ion-label>
+    <ion-input type="text" [(ngModel)]="user.avalidateCode"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="activity($event)">激活</button>
+</ion-list>
+
+<ion-list *ngIf="displayMode=='logined'">
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="assets/logo.png">
+    </ion-thumbnail>
+    <h2>{{user.userName}}</h2>
+  </ion-item>
+  <button ion-button block (click)="activity($event)">退出登录</button>
+</ion-list>
 </ion-content>

@@ -25264,7 +25264,164 @@ page-home .result li .en .mp3 {
   margin-left: 10px;
 }
 
+page-home .result li .en .addbuttn {
+  float: right;
+}
+
 page-home .result li .cn {
   margin-top: 2px;
   color: #666;
+}
+
+page-label .result {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+page-label .result .itemList {
+  padding-left: 0 !important;
+}
+
+page-label .result .itemList .updatetime {
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+page-label .result .itemList .en {
+  font-size: 1.2em;
+}
+
+page-label .result .itemList .en .type {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+page-label .result .itemList .en .mp3 {
+  /*float: right;*/
+  margin-left: 10px;
+}
+
+page-label .result .itemList .en .addbuttn {
+  float: right;
+}
+
+page-label .result .itemList .cn {
+  margin-top: 2px;
+  font-size: 0.8em;
+  white-space: normal;
+  color: #666;
+}
+
+.toastBg .toast-wrapper {
+  background: #387ef5;
+  color: #fff;
+  text-align: center;
+  /* color: black; */
+}
+
+.toastWarningBg .toast-wrapper {
+  background: #ff6c60;
+  color: #fff;
+  text-align: center;
+  /* color: black; */
+}
+
+page-reciteWords .labelBtn {
+  float: right;
+}
+
+page-reciteWords .result {
+  margin: 0;
+  padding: 0;
+}
+
+page-reciteWords .result .itemList {
+  padding-left: 0 !important;
+}
+
+page-reciteWords .result .itemList .updatetime {
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+page-reciteWords .result .itemList .en {
+  font-size: 1em;
+  white-space: normal;
+}
+
+page-reciteWords .result .itemList .en .type {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+page-reciteWords .result .itemList .en .addbuttn {
+  float: right;
+}
+
+page-reciteWords .result .itemList .mp3 {
+  margin-left: 10px;
+}
+
+page-reciteWords .result .itemList .cn {
+  margin-top: 2px;
+  font-size: 0.8em;
+  white-space: normal;
+  color: #666;
+}
+
+page-reciteWords .toastBg .toast-wrapper {
+  background: #387ef5;
+  color: #fff;
+  text-align: center;
+  /* color: black; */
+}
+
+page-reciteWordsInLabel .labelBtn {
+  float: right;
+}
+
+page-reciteWordsInLabel .result {
+  margin: 0;
+  padding: 0;
+}
+
+page-reciteWordsInLabel .result .itemList {
+  padding-left: 0 !important;
+}
+
+page-reciteWordsInLabel .result .itemList .updatetime {
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+page-reciteWordsInLabel .result .itemList .en {
+  font-size: 1em;
+  white-space: normal;
+}
+
+page-reciteWordsInLabel .result .itemList .en .type {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+page-reciteWordsInLabel .result .itemList .en .addbuttn {
+  float: right;
+}
+
+page-reciteWordsInLabel .result .itemList .mp3 {
+  margin-left: 10px;
+}
+
+page-reciteWordsInLabel .result .itemList .cn {
+  margin-top: 2px;
+  font-size: 0.8em;
+  white-space: normal;
+  color: #666;
+}
+
+page-reciteWordsInLabel .toastBg .toast-wrapper {
+  background: #387ef5;
+  color: #fff;
+  text-align: center;
+  /* color: black; */
 }

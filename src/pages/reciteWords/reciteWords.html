@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="labelPageSetting($event)">
+            <ion-icon name="ios-settings"></ion-icon>
+        </button>
+    </ion-buttons>
+
+    <ion-title>生词本</ion-title>
+    
+    <ion-buttons end>
+        <button ion-button icon-only (click)="labelPage($event)">
+            <ion-icon name="ios-albums"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list class="result">
+    <ion-item *ngFor="let c of items" class="itemList">
+      <span class="updatetime">{{c.updatetimestr}}</span>
+
+      <div class="en"><span *ngIf="!setting.displayMode">{{c.word}}</span><span *ngIf="setting.displayMode">{{c.means}}</span>
+          <span class="type">[{{c.typeen}}|{{c.typecn}}]</span>
+          <ion-icon name="ios-menu-outline" class="addbuttn" (click)="multiButton($event,c)"></ion-icon>
+      </div>
+      <span style="font-size:0.5em;">🇬🇧</span><ion-icon (click)="playVoice($event,c.voice,'ph_en_mp3')" class="mp3" name="ios-notifications"></ion-icon>
+      <span style="font-size:0.5em;">🇺🇸</span><ion-icon (click)="playVoice($event,c.voice,'ph_am_mp3')" class="mp3" name="ios-notifications"></ion-icon>
+      <div class="cn" *ngIf="setting.displaySwither&&!setting.displayMode">{{c.means}}</div>
+      <div class="cn" *ngIf="setting.displaySwither&&setting.displayMode">{{c.word}}</div>
+      <br>
+      <button ion-button *ngIf="!setting.displaySwither" (click)="checkTheTranslate($event,c)">查看释义</button>
+      
+    </ion-item>
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+  </ion-list>
+
+</ion-content>

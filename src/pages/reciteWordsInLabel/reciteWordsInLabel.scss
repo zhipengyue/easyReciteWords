@@ -1,0 +1,47 @@
+page-reciteWordsInLabel {
+    .labelBtn{
+        float:right;
+    }
+    .result{
+        margin: 0;
+        padding: 0;
+        .itemList{
+            padding-left:0!important;
+
+            .updatetime{
+                color:#aaa;
+                font-size:0.8em;
+            }
+            .en{
+                font-size: 1em;
+                white-space:normal;
+                .type{
+                    font-size: 0.8em;
+                    color:#aaa;
+                }
+                
+                .addbuttn{
+                    float:right;
+                }
+            }
+            .mp3{
+                    margin-left:10px;
+                }
+            .cn{
+                margin-top:2px;
+                font-size:0.8em;
+                white-space:normal;
+                color:#666;
+            }
+            
+        }
+    }
+    .toastBg{
+        .toast-wrapper{
+            background:#387ef5;
+            color:#fff;
+            text-align: center;
+            /* color: black; */
+        }
+    }
+}

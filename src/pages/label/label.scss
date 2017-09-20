@@ -1,0 +1,51 @@
+page-label {
+    .result{
+        margin: 0!important;
+        padding: 0!important;
+        .itemList{
+            padding-left:0!important;
+
+            .updatetime{
+                color:#aaa;
+                font-size:0.8em;
+            }
+            .en{
+                font-size: 1.2em;
+                .type{
+                    font-size: 0.8em;
+                    color:#aaa;
+                }
+                .mp3{
+                    /*float: right;*/
+                    margin-left:10px;
+                }
+                .addbuttn{
+                    float:right;
+                }
+            }
+            .cn{
+                margin-top:2px;
+                font-size:0.8em;
+                white-space:normal;
+                color:#666;
+            }
+            
+        }
+    }
+}
+.toastBg{
+    .toast-wrapper{
+        background:#387ef5;
+        color:#fff;
+        text-align: center;
+        /* color: black; */
+    }
+}
+.toastWarningBg{
+    .toast-wrapper{
+        background:#ff6c60;
+        color:#fff;
+        text-align: center;
+        /* color: black; */
+    }
+}
